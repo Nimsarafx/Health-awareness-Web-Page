@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Define character encoding of the document-->
+    <meta charset="UTF-8">
+    <title>User Profile</title>
+    <!--Link to the external CSS file-->
+    <link rel="stylesheet" type="text/css" href="profile.css">
+    <!--Link to google fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2? family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<!--navbar-->
+<nav>
+    <!--website logo image-->
+    <img src="logo.png" alt="Healthy Harvest">
+    <span id="menu-btn" class="material-icons">menu</span>
+    <div class="nav-links" id="navLinks">
+        <ul>
+            <!--Individaul navigation links-->
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="shop.html">STORE</a></li>
+            <li><a href="profile.html">PROFILE</a></li>
+            <li><a href="team.html">TEAM</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!--Container for sign in form-->
+<div class="container signInForm" id="signInForm">
+    <!--User inputs-->
+    <div class="prompt">Username: <input type="text" placeholder="Username" id="username"></div>
+    <br>
+    <div class="prompt">Password: <input type="password" placeholder="Password" id="password" style="margin-top: 2px;"></div>
+    <button class="signInBtn" onclick="signIn()">Sign In</button>
+</div>
+<div class="container userProfileForm" id="userProfileForm">
+    <!--Progress bar-->
+    <div class="progress">
+        <div class="progress-bar" id="progressBar">0%</div>
+    </div>
+    <!--Steps for user profile form-->
+    <div class="step active" id="step1">
+        <div class="prompt">Name: <input type="text" id="name"></div>
+        <button class="nextBtn" onclick="nextPrompt('step1')">Next</button>
+        <button class="skipBtn" onclick="skipPrompt('step1')">Skip</button>
+    </div>
+    <div class="step" id="step2">
+        <div class="prompt">Surname: <input type="text" id="surname"></div>
+        <button class="nextBtn" onclick="nextPrompt('step2')">Next</button>
+        <button class="skipBtn" onclick="skipPrompt('step2')">Skip</button>
+        <button class="prevBtn" onclick="prevPrompt('step2')">Previous</button>
+    </div>
+    <div class="step" id="step3">
+        <div class="prompt">Age: <input type="text" id="age"></div>
+        <button class="nextBtn" onclick="nextPrompt('step3')">Next</button>
+        <button class="skipBtn" onclick="skipPrompt('step3')">Skip</button>
+        <button class="prevBtn" onclick="prevPrompt('step3')">Previous</button>
+    </div>
+    <div class="step" id="step4">
+        <div class="prompt">Gender: <input type="text" id="gender"></div>
+        <button class="nextBtn" onclick="nextPrompt('step4')">Next</button>
+        <button class="skipBtn" onclick="skipPrompt('step4')">Skip</button>
+        <button class="prevBtn" onclick="prevPrompt('step4')">Previous</button>
+    </div>
+    <div class="step" id="step5">
+        <div class="prompt">Agree with privacy terms: <input type="checkbox" id="privacy"></div>
+        <button class="nextBtn" onclick="nextPrompt('step5')">Next</button>
+        <button class="skipBtn" onclick="skipPrompt('step5')">Skip</button>
+        <button class="prevBtn" onclick="prevPrompt('step5')">Previous</button>
+    </div>
+    <div class="step" id="step6">
+        <div class="prompt">Rational: <input type="text" id="rational"></div>
+        <button class="nextBtn" onclick="nextPrompt('step6')">Next</button>
+        <button class="skipBtn" onclick="skipPrompt('step6')">Skip</button>
+        <button class="prevBtn" onclick="prevPrompt('step6')">Previous</button>
+    </div>
+
+    <div class="step" id="step7">
+        <div class="prompt">DoA: <input type="text" id="doa"></div>
+        <button class="nextBtn" onclick="nextPrompt('step7')">Next</button>
+        <button class="skipBtn" onclick="skipPrompt('step7')">Skip</button>
+        <button class="prevBtn" onclick="prevPrompt('step7')">Previous</button>
+    </div>
+    <div class="step" id="step8">
+        <div class="prompt">Task: <input type="text" id="task"></div>
+        <button class="nextBtn" onclick="nextPrompt('step8')">Next</button>
+        <button class="skipBtn" onclick="skipPrompt('step8')">Skip</button>
+        <button class="prevBtn" onclick="prevPrompt('step8')">Previous</button>
+    </div>
+    <div class="step" id="step9">
+        <div class="prompt">Place: <input type="text" id="place"></div>
+        <button class="nextBtn" onclick="nextPrompt('step9')">Next</button>
+        <button class="skipBtn" onclick="skipPrompt('step9')">Skip</button>
+        <button class="prevBtn" onclick="prevPrompt('step9')">Previous</button>
+    </div>
+    <div class="step" id="step10">
+        <div class="prompt">Assignment type: <input type="text" id="assignmentType"></div>
+        <button class="nextBtn" onclick="nextPrompt('step10')">Next</button>
+        <button class="skipBtn" onclick="skipPrompt('step10')">Skip</button>
+        <button class="prevBtn" onclick="prevPrompt('step10')">Previous</button>
+    </div>
+    <div class="step" id="step11">
+        <div class="prompt">Area of study: <input type="text" id="areaOfStudy"></div>
+        <button class="nextBtn" onclick="nextPrompt('step11')">Next</button>
+        <button class="skipBtn" onclick="skipPrompt('step11')">Skip</button>
+        <button class="prevBtn" onclick="prevPrompt('step11')">Previous</button>
+    </div>
+    <div class="step" id="step12">
+        <div class="prompt">Highest degree: <input type="text" id="highestDegree"></div>
+        <button class="nextBtn" onclick="nextPrompt('step12')">Next</button>
+        <button class="skipBtn" onclick="skipPrompt('step12')">Skip</button>
+        <button class="prevBtn" onclick="prevPrompt('step12')">Previous</button>
+    </div>
+    <div class="step" id="step13">
+        <div class="prompt">University: <input type="text" id="university"></div>
+        <button class="nextBtn" onclick="nextPrompt('step13')">Next</button>
+        <button class="skipBtn" onclick="skipPrompt('step13')">Skip</button>
+        <button class="prevBtn" onclick="prevPrompt('step13')">Previous</button>
+    </div>
+    <div class="step" id="step14">
+        <div class="prompt">Completion year: <input type="text" id="completionYear"></div>
+        <button class="nextBtn" onclick="nextPrompt('step14')">Next</button>
+        <button class="skipBtn" onclick="skipPrompt('step14')">Skip</button>
+        <button class="prevBtn" onclick="prevPrompt('step14')">Previous</button>
+    </div>
+    <div class="step" id="step15">
+        <div class="prompt">Country: <input type="text" id="country"></div>
+        <button class="nextBtn" onclick="nextPrompt('step15')">Next</button>
+        <button class="skipBtn" onclick="skipPrompt('step15')">Skip</button>
+        <button class="prevBtn" onclick="prevPrompt('step15')">Previous</button>
+    </div>
+    <div class="step" id="step16">
+        <div class="prompt">Minimum hours per week: <input type="text" id="hoursPerWeek"></div>
+        <button class="submitBtn" onclick="displayProfile()">Submit</button>
+        <button class="prevBtn" onclick="prevPrompt('step16')">Previous</button>
+    </div>
+    <div class="details" id="userDetails"></div>
+</div>
+
+<script>
+    //JavaScript code for interactive functionality
+    let currentStep = 1;
+    const progressBar = document.getElementById('progressBar');
+
+    function nextPrompt(stepId) {
+        const currentStepDiv = document.getElementById(stepId);
+        const nextStepDiv = document.getElementById(`step${parseInt(stepId.substr(4)) + 1}`);
+        const inputs = currentStepDiv.querySelectorAll('input[type="text"], input[type="checkbox"]');
+        let allInputsFilled = true;
+
+        // Check if all input fields are filled
+        inputs.forEach(input => {
+            if ((input.type === 'text' && input.value.trim() === '') || (input.type === 'checkbox' && !input.checked)) {
+                allInputsFilled = false;
+            }
+        });
+
+        if (allInputsFilled) {
+            currentStepDiv.classList.remove('active');
+            nextStepDiv.classList.add('active');
+            currentStep++;
+            updateProgress(); // Move the updateProgress function call here
+        } else {
+            alert('Please fill in all the required fields.');
+        }
+    }
+
+    function prevPrompt(stepId) {
+        const currentStepDiv = document.getElementById(stepId);
+        const prevStepDiv = document.getElementById(`step${parseInt(stepId.substr(4)) - 1}`);
+        currentStepDiv.classList.remove('active');
+        prevStepDiv.classList.add('active');
+        currentStep--;
+        updateProgress();
+    }
+
+    function skipPrompt(stepId) {
+        const currentStepDiv = document.getElementById(stepId);
+        const nextStepDiv = document.getElementById(`step${parseInt(stepId.substr(4)) + 1}`);
+
+        // Check if the current step is not step 1 before updating the progress
+        if (currentStep !== 1) {
+            currentStepDiv.classList.remove('active');
+            nextStepDiv.classList.add('active');
+            if (!nextStepDiv.classList.contains('step')) {
+                currentStep++;
+            }
+            updateProgress();
+        } else {
+            // If current step is 1, only proceed to the next step without updating progress
+            currentStepDiv.classList.remove('active');
+            nextStepDiv.classList.add('active');
+            if (!nextStepDiv.classList.contains('step')) {
+                currentStep++;
+            }
+        }
+    }
+
+
+    function updateProgress() {
+        const totalSteps = 16;
+        let progress = (currentStep / totalSteps) * 100;
+        // Ensure progress is capped at 100% when reaching the last step
+        progress = Math.min(progress, 100);
+        progressBar.style.width = `${progress}%`;
+        progressBar.textContent = `${progress.toFixed(0)}%`;
+        if (progress === 100) {
+            progressBar.style.backgroundColor = '#4caf50';
+        }
+    }
+
+
+    function displayProfile() {
+        const userDetails = document.getElementById('userDetails');
+        userDetails.innerHTML = `
+            <h2>User Profile</h2>
+            <div class="details">
+                <p>Name: ${document.getElementById('name').value}</p>
+                <p>Surname: ${document.getElementById('surname').value}</p>
+                <p>Age: ${document.getElementById('age').value}</p>
+                <p>Gender: ${document.getElementById('gender').value}</p>
+                <p>Agree with privacy terms: ${document.getElementById('privacy').checked ? 'Yes' : 'No'}</p>
+            </div>
+            <div class="divider" style="background-color: #a6c8ff;"></div>
+            <div class="details">
+                <p>Rational: ${document.getElementById('rational').value}</p>
+                <p>DoA: ${document.getElementById('doa').value}</p>
+                <p>Task: ${document.getElementById('task').value}</p>
+                <p>Place: ${document.getElementById('place').value}</p>
+                <p>Assignment type: ${document.getElementById('assignmentType').value}</p>
+            </div>
+            <div class="divider" style="background-color: #a6c8ff;"></div>
+            <div class="details">
+                <p>Area of study: ${document.getElementById('areaOfStudy').value}</p>
+                <p>Highest degree: ${document.getElementById('highestDegree').value}</p>
+                <p>University: ${document.getElementById('university').value}</p>
+                <p>Completion year: ${document.getElementById('completionYear').value}</p>
+                <p>Country: ${document.getElementById('country').value}</p>
+                <p>Minimum hours per week: ${document.getElementById('hoursPerWeek').value}</p>
+            </div>
+        `;
+        document.querySelectorAll('.nextBtn, .prevBtn, .skipBtn, .submitBtn').forEach(btn => btn.style.display = 'none');
+        progressBar.style.display = 'none';
+        const steps = document.querySelectorAll('.step');
+        steps.forEach((s) => s.style.display = 'none');
+    }
+
+    function signIn() {
+        const signInForm = document.getElementById('signInForm');
+        const userProfileForm = document.getElementById('userProfileForm');
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        if (username && password) {
+            signInForm.style.display = 'none';
+            userProfileForm.style.display = 'block';
+        } else {
+            alert('Please enter username and password.');
+        }
+    }
+
+    const menuBtn = document.querySelector("#menu-btn");
+    const closeMenuBtn = document.querySelector("#close-menu-btn");
+    const navLinks = document.querySelector("#navLinks");
+
+    if (menuBtn) {
+        menuBtn.addEventListener("click", () => {
+            navLinks.classList.toggle("show-mobile-menu");
+            menuBtn.classList.toggle("active"); // Add this line
+        });
+    }
+
+    if (closeMenuBtn) {
+        closeMenuBtn.addEventListener("click", () => {
+            navLinks.classList.remove("show-mobile-menu");
+            menuBtn.classList.remove("active"); // Add this line
+        });
+    }
+
+
+</script>
+
+<!--Footer section-->
+<section class="footer">
+    <footer>
+        <!--Developer information-->
+        <h3>Developer - Pamodi Pansiluni</h3>
+        <!--Link to editor page-->
+        <a class="work-btn" href="editor.html">Editor</a>
+    </footer>
+</section>
+
+
+
+</body>
+</html>

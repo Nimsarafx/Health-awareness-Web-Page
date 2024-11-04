@@ -1,0 +1,111 @@
+
+/* Body styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("splashscreen_image.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.loader {
+    font-size: 14px;
+    width: 50;
+    height: 50;
+}
+
+/* Splash screen styles */
+.splash-container {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.splash-container h1 {
+    font-size: 4em;
+    font-weight: bold;
+    color: darkolivegreen; 
+}
+
+/* Main content styles */
+#main-content {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.topic {
+    
+    font-family: 'Lobster', cursive;
+    font-size: 6em;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    
+}
+
+.subtopic {
+    font-size: 3em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   
+}
+.members{
+    font-size: 24px;
+    text-align: left;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-left: 300px;
+    animation: forwards;
+    background-color:s#93C572;
+    width:500px;
+
+}
+
+.team {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-top:10px;
+    
+}
+
+.team li {
+    font-size: 20px;
+    margin-bottom: 10px;
+    animation: forwards;
+    margin-left:150px;
+    
+}
+
+/* Animation for content */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation to main content */
+#main-content {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Hide main content initially */
+.hidden {
+    display: none;
+}

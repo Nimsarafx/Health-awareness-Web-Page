@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Team</title>
+        <!--Link to external CSS sheet-->
+        <link rel="stylesheet" type="text/css" href="team.css">
+        <!--Link to google fonts-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link href="https://fonts.googleapis.com/css2? family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!--Header section-->
+        <header>
+            <!--Navigation bar-->
+            <nav>
+                <!--Website logo image-->
+                <img src="logo.png" alt="Healthy Harvest">
+                <!--Navigation links-->
+                <div class="nav-links" id="navLinks">
+                    <ul>
+                        <li><a href="home.html">HOME</a></li>
+                        <li><a href="shop.html">STORE</a></li>
+                        <li><a href="profile.html">PROFILE</a></li>
+                        <li><a href="team.html">TEAM</a></li>
+                    </ul>
+                </div>
+                <!--Menu button for mobile view-->
+                <span id="menu-btn" class="material-icons">menu</span>
+            </nav>
+            
+            <!--wrapper for the content-->
+            <div class="wrapper">
+        
+                <div class="title">
+                    <h4>Student Details</h4>
+                </div>
+                
+                <!--Card container for student information-->
+                <div class="card_Container">
+                    
+                    <!--Individual student card-->
+                    <div class="card">
+                        <!--Image box-->
+                        <div class="imbBx">
+                            <img src="Student1.jpg" alt="Ashvitha">
+                        </div>
+        
+                        <div class="content">
+                            <div class="contentBx">
+                                <h3><b>Ashvitha Ravindran</b> <br><span>Role - Student 1</span></h3>
+                                <h3><br><span>Designed and implemented pages: Splash Screen | Shop</span></h3>
+                            </div>
+                        </div>
+        
+                    </div>
+        
+                    <div class="card">
+        
+                        <div class="imbBx">
+                            <img src="Student2.png" alt="Nimsara">
+                        </div>
+        
+                        <div class="content">
+                            <div class="contentBx">
+                                <h3><b>Nimsara Mahith</b> <br><span>Role - Student 2</span></h3>
+                                <h3><br><span>Designed and implemented pages: Home page | Feedback</span></h3>
+                            </div>
+                        </div>
+        
+                    </div>
+        
+                    <div class="card">
+        
+                        <div class="imbBx">
+                            <img src="Student3.png" alt="Pansiluni">
+                        </div>
+        
+                        <div class="content">
+                            <div class="contentBx">
+                                <h3><b>Pamodi Pansiluni</b> <br><span>Role - Student 3</span></h3>
+                                <h3><br><span>Designed and implemented pages: User Profile | Team</span></h3>
+                            </div>
+                        </div>
+        
+                    </div>
+                </div>
+        
+            </div>
+    
+            <section class="footer">
+                <footer>
+                    <h3>Developer - Pamodi Pansiluni</h3>
+                    <a class="work-btn" href="editor.html">Editor</a>
+                </footer>
+            
+            </section>
+        
+            <script>
+                //JavaScript for mobile menu functionality
+                const menuBtn = document.querySelector("#menu-btn");
+                const closeMenuBtn = document.querySelector("#close-menu-btn");
+                const navLinks = document.querySelector("#navLinks");
+
+                if (menuBtn) {
+                    menuBtn.addEventListener("click", () => {
+                        navLinks.classList.toggle("show-mobile-menu");
+                        menuBtn.classList.toggle("active"); 
+                    });
+                }
+
+                if (closeMenuBtn) {
+                    closeMenuBtn.addEventListener("click", () => {
+                        navLinks.classList.remove("show-mobile-menu");
+                        menuBtn.classList.remove("active"); 
+                    });
+                }
+                </script>
+        </header>    
+    </body> 
+</html>

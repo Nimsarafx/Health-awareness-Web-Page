@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Character encoding for the document-->
+        <meta charset="UTF-8">
+        <!--title of the page-->
+        <title>Content Page</title>
+        <link rel="stylesheet" type="text/css" href="content.css">
+        <!--links for google fonts-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link href="https://fonts.googleapis.com/css2? family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!--header section-->
+        <section>
+            <header>
+                <!--Navigation menu-->
+                <nav>
+                    <!--logo image-->
+                    <img src="logo.png" alt="Healthy Harvest">
+                    <div class="nav-links">
+                        <!--close button of the mobile menu-->
+                        <span id="close-menu-btn" class="material-icons">close</span>
+                        <ul>
+                            <li><a href="home.html">HOME</a></li>
+                            <li><a href="shop.html">STORE</a></li>
+                            <li><a href="profile.html">PROFILE</a></li>
+                            <li><a href="team.html">TEAM</a></li>
+                        </ul>
+                    </div>
+                    <!--open button of the mobile menu-->
+                    <span id="menu-btn" class="material-icons">menu</span>
+                </nav>
+            <div class="text">
+                <!--Main heading-->
+                <h1>MENTAL HEALTH</h1>
+            </div>
+        
+            </header>
+        </section>
+        
+        <!--Main content section-->
+        <section class="detail">
+            <!--Sub heading-->
+            <h3><br><br>Understanding Mental Health: A Holistic Approach to Well-Being<br><br></h3>
+            <p>The topic of mental health has garnered a lot of attention in recent years, and for good reason. Our emotional, psychological, and social well-being are all included in mental health, which affects our thoughts, feelings, and behaviours. It is vital to our general well-being and is essential to our everyday activities, interpersonal interactions, and output. But in spite of its significance, mental health is frequently disregarded or stigmatised, which poses serious problems for both individuals and society at large.
+            Realising that mental health is a spectrum is essential to comprehending the field. Mental health is a spectrum that ranges from flourishing to struggling, much like physical health is a continuum that extends from illness to wellbeing. People may find themselves at different points at any one time.Realising that mental health is a spectrum is essential to comprehending the field. Mental health is a spectrum that ranges from flourishing to struggling, much like physical health is a continuum that extends from illness 
+            to wellbeing. People may find themselves at different positions on this spectrum at any one time, and it's important to recognise that mental health is dynamic and subject to change.
+            <br><br>In order to promote mental health, one must address a number of variables that affect wellbeing. This encompasses contextual influences like upbringing, socioeconomic level, and resource access, in addition to biological aspects like heredity and brain chemistry. Furthermore, social determinants of mental health outcomes include relationships, social support, and community involvement.
+            It's critical to understand that mental health problems are widespread and can impact people of any age, gender, race, or background. Mental health issues including anxiety disorders, depression, bipolar disorder, and schizophrenia are widespread problems that millions of individuals experience globally. But people with mental health disorders may live happy,
+            satisfying lives and make significant contributions to society if they receive the right care, understanding, and support.
+            <br><br>Effectively addressing mental health calls for a multimodal strategy that includes treatment, early intervention, prevention, and continuing support. This entails dispelling the stigma associated with mental health, making mental health treatments easily available and reasonably priced, and incorporating mental health into primary healthcare systems.
+            In addition, encouraging mental health requires creating communities, businesses, and educational institutions that value emotional well-being. This entails encouraging mental health literacy, imparting coping mechanisms and resilience-boosting techniques, and setting up environments where people feel encouraged and secure to ask for assistance when they need it.
+            <br><br>Understanding the connections between mental health and other social problems like trauma, prejudice, and poverty is also essential. Because of structural injustices, people from marginalised areas may encounter greater rates of mental health issues and face extra obstacles when trying to get mental health care. A comprehensive strategy that tackles the socioeconomic determinants of health and fosters equity and inclusion is needed to overcome these inequities.
+            <br><br>In the end, comprehending mental health necessitates a mentality change—from seeing it a personal shortcoming to acknowledging it as an essential component of the human experience. We can build a culture in which everyone has the chance to flourish mentally, emotionally, and socially by raising awareness of mental health issues, lowering stigma, and placing a high priority on emotional well-being. By working together, we can create a society in which mental health
+            is seen as a crucial aspect of general wellbeing and is treated with respect and celebration.
+        </p>
+    
+        </section>
+    
+        <!--footer section-->
+        <section class="footer">
+            <footer>
+                <h3>
+                    Developer - Pamodi Pansiluni 
+                </h3>
+
+                <!--Link to editor page-->
+                <a class="work-btn" href="editor.html">Editor</a>
+            </footer>
+        
+        </section>
+    
+        <!--Toggling mobile menu using JavaScript-->
+        <script>
+    
+            //Selecting elements
+            const header = document.querySelector("header");
+            const menuBtn = document.querySelector("#menu-btn");
+            const closeMenuBtn = document.querySelector("#close-menu-btn");
+
+            if(menuBtn){
+                menuBtn.addEventListener("click", () => {
+                    header.classList.toggle("show-mobile-menu");
+                });
+            }
+            if(closeMenuBtn){
+                closeMenuBtn.addEventListener("click", () => {
+                    header.classList.remove("show-mobile-menu");
+                });
+        
+            }
+        </script>
+                   
+    </body>
+
+</html>

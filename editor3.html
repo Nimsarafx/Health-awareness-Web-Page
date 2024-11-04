@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--Title of the page-->
+    <title>Editor's Page</title>
+    <!--Link to the external CSS file-->
+    <link rel="stylesheet" type="text/css" href="editor3.css">
+    <!--Material icons for navigation menu-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2? family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<!--Page header with navigation menu-->
+<header>
+    <nav>
+        <!--Website logo image-->
+        <img src="logo.png" alt="Healthy Harvest">
+        <span id="menu-btn" class="material-icons">menu</span>
+        <div class="nav-links">
+            <span id="close-menu-btn" class="material-icons">close</span>
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="Cart.html">STORE</a></li>
+                <li><a href="profile.html">PROFILE</a></li>
+                <li><a href="team.html">TEAM</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<!--Main container for page content-->
+<div class="container">
+    <div class="editor-info">
+        <h1>Page Editor</h1>
+    </div>
+
+    <div class="name">
+        <p><strong>Name:</strong> Ashvitha Raveendran</p>
+        <p><strong>Role:</strong> Student 1</p>
+        <h2>The following pages are edited by me!</h2>
+    </div>
+
+    <div class="tasks">
+        <br>
+        <h3>Splash Screen</h3>
+        <p>The Splashscreen is developed using HTML, CSS and JavaScript<br>This is a window that contains the image, the logo of the website and <br>the members of the group who worked on the creation of this website <br> which is then directed to the home page.
+            <li><a href="splashscreen.html" target="_blank">Splash screen</a><br><br></li>
+        <h3>Shop</h3>
+        <p>Created a Shop page using html and css.<br>showcasing few products with the aim of raising fund inorder to add a ecommerce functionality to the site.<br>developed in a way where wecan purchase products which are added into the cart and processed for payment<br></p>
+            <li><a href="Cart.html" target="_blank">Shop</a><br><br></li>
+        <h3>Content Page</h3>
+        <p>Created a Team page using html and css.<br>Providing knowledge about social health and well-being.</p>
+            <li><a href="content3.html" target="_blank">Content</a></li>
+
+    </div>
+</div>
+
+<script>
+    /*JavaScript code for mobile menu toggl*/
+    const header = document.querySelector("header");
+    const menuBtn = document.querySelector("#menu-btn");
+    const closeMenuBtn = document.querySelector("#close-menu-btn");
+    if(menuBtn){
+        menuBtn.addEventListener("click", () => {
+            header.classList.toggle("show-mobile-menu");
+        });
+    }
+    if(closeMenuBtn){
+        closeMenuBtn.addEventListener("click", () => {
+            header.classList.remove("show-mobile-menu");
+        });
+
+    }
+</script>
+</body>
+</html>

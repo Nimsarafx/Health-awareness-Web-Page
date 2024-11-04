@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Editor's Page</title>
+    <link rel="stylesheet" href="syles.css">
+    <link rel="stylesheet" href="syles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        header{
+        background-image:none;
+    }
+    </style>
+    
+</head>
+<body>
+    <header class="editor">
+        <nav>
+            <img src="imges/logo.png" alt="imges">
+            <div class="nav-links">
+                <span id="close-menu-btn" class="material-icons">close</span>
+                <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="Cart.html">STORE</a></li>
+                    <li><a href="profile.html">PROFILE</a></li>
+                    <li><a href="team.html">TEAM</a></li>
+                </ul>
+            </div>
+            <span id="menu-btn" class="material-icons">menu</span>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="editor-info">
+            <h1>Page Editor</h1>
+        </div>
+
+        <div class="name">
+            <p><strong>Name: Nimsara Mahith</strong> </p>
+            <p><strong>Role: Student 2</strong> </p>
+            <h2>The following pages are edited by me!</h2>
+        </div>
+        
+        <div class="tasks">
+            <h3>Home Page(Navigation bar)</h3>
+            <p>Created the home page by using html,css and javascript accordingly to enhance the user friendly environement.<br>
+                Navigation bar was created according to the content created team members.</p>
+            <a class="editor-btn" href="home.html">Home Page</a><br><br>
+
+            <h3>Feedback Form</h3>
+            <p>Created the feedback by using html,css and javascript accordingly to get custermer feed backs on the website.<br>
+                user inputs are validated accordingly for getting important details of users accuratey. </p>
+            <a class="editor-btn" href="feedback.html">Feedback form</a><br><br>
+
+            <h3>Content Page</h3>
+            <p>Created the content page by using html and css accordingly as the spesifications discribed. This will make it easy to go througth elements covered in my role.<br>
+                user inputs are validated accordingly for getting important details of users accuratey. </p>
+            <a class="editor-btn" href="content.html">Content Page</a>
+        </div>
+
+s
+    </div>
+
+    <div class="footer">
+        <footer>
+            <a class="work-btn" href="editor.html">page editor</a>
+        </footer>
+    </div>
+    
+
+    
+    <script>
+
+        const header = document.querySelector("header");
+        const menuBtn = document.querySelector("#menu-btn");
+        const closeMenuBtn = document.querySelector("#close-menu-btn");
+        if(menuBtn){
+            menuBtn.addEventListener("click", () => {
+                header.classList.toggle("show-mobile-menu");
+            });
+        }
+        if(closeMenuBtn){
+            closeMenuBtn.addEventListener("click", () => {
+                header.classList.remove("show-mobile-menu");
+            });
+    
+        }
+    </script>
+</body>
+</html>

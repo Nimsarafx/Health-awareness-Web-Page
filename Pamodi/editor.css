@@ -1,0 +1,171 @@
+/*Remove default browser margins and paddings*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    /*Set background image and backgroun colour for the header*/
+    background-image:linear-gradient(rgba(38, 51, 103, 0.5),rgba(38, 51, 103, 0.5)), url(imges/fullbodyprofilecoupleyoungtwofriendsstrongsportysportswoman.jpg);
+}
+
+/*Styling navigation*/
+nav{
+    background: rgba(255,255,255,0.7);
+    height: 2px;
+    display: flex;
+    padding: 25px 35px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Set width and height for the logo*/
+nav img{
+    width: 100px;
+    height: 30px;
+    align-items: center;
+}
+
+/*Styling navigation links*/
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 30px 20px;
+    position: relative;
+    font-weight: bold;
+}
+
+.nav-links ul li a{
+    color: #000;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: rgb(255, 255, 255);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+}
+.nav-links ul li a:hover{
+    color: rgb(0, 0, 0);
+    transition: 0.5s;
+}
+
+/*Styling open and close menu buttons of mobile menu*/
+#menu-btn{
+    display: none;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    z-index: 1001;
+}
+#close-menu-btn{
+    display: none;
+    position: absolute;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    top: 20px;
+    right: 0px;
+    left: 0px;
+}
+
+@media screen and (max-width: 800px){
+    #close-menu-btn, #menu-btn{
+        display: block;
+    }
+
+    .nav-links{
+        position: fixed;
+        background: rgba(255, 255, 255, 0.7);
+        height: 100vh;
+        width: 100px;
+        top: 0px;
+        right: -150px;
+        text-align: left;
+        flex-direction: column;
+        padding: 70px 20px 0;
+        z-index: 2;
+        transition: right 0.15s ease;
+    }
+
+    header.show-mobile-menu .nav-links {
+        right: 0px;
+    }
+}
+
+/*Set padding for container*/
+.container {
+    padding: 20px;
+}
+.editor-info {
+    background-color: #add8e6; 
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+.name {
+    background-color: white;
+    padding: 5px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    font-style: italic;
+    font-weight: 100;
+}
+.name h2 {
+    font-size: medium;
+}
+
+.name::before{
+    content: '';
+    position: absolute;
+    height: 2px;
+    margin-top: 32px;
+    background-color: black;
+}
+
+.name::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    top: 125px;
+    background-color: black;
+}
+
+.name::before {
+    /*Set top for line before name*/
+    top: 23%; 
+    left: 30px;
+    right: 30px;
+}
+
+.name::after {
+    left: 30px;
+    right: 30px;
+}
+
+.tasks {
+    background-color: #add8e6;
+    padding: 50px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    top: 1000px;
+    height: auto;
+    /*Set height for h3*/
+    h3{
+        height: 25px;
+    }
+}

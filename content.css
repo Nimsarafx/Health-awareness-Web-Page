@@ -1,0 +1,212 @@
+/*Resetting marging, padding, and setting default font family*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+/*Styling the header*/
+header{
+    background-image:url("https://res.cloudinary.com/people-matters/image/upload/q_auto,f_auto/v1660938645/1660938644.jpg");
+}
+.text{
+    width: 60%;
+    color: white;
+}
+header{
+    min-height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+/*Styling for navigation*/
+nav{
+    background: rgb(255,255,255,0.7);
+    height: 2px;
+    display: flex;
+    padding: 25px 35px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Styling for logo image*/
+nav img{
+    width: 100px;
+    height: 30px;align-items: center;
+    
+}
+
+/*Styling for navigation links*/
+.nav-links ul li{
+    
+    list-style: none;
+    display: inline-block;
+    padding: 30px 20px;
+    position: relative;
+    font-weight: bold;
+}
+
+.nav-links ul li a{
+    color: #000;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-links ul li ::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: rgb(255, 255, 255);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover ::after{
+    width:100% ;
+    background-color: rgb(0, 0, 0);
+}
+.nav-links ul li a:hover{
+    color:rgb(0, 0, 0);
+    transition: 0.5s;
+}
+
+/*Styling for text */
+.text{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    background-color: rgba(77, 167, 200, 0.4);
+}
+.text
+{
+    border-style:solid;
+    border-radius: 10px;
+}
+.text:hover{
+    background-color: rgba(34, 83, 101, 0.8);
+    border-style:double ;
+    border-width: 10px;
+    transition: 1s;
+}
+.text h1{
+    margin: 10px  10px;
+    font-size: 52px;
+    color: rgb(255, 255, 255);
+}
+
+
+/*Styling for menu and close button of small screen*/
+#menu-btn{
+    display: none;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+#close-menu-btn{
+    display: none;
+    position: absolute;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    top: 20px;
+    right: 0px;
+    left: 0px;
+}
+
+/*Media quesry of small screen*/
+@media screen and (max-width:800px){
+    #close-menu-btn, #menu-btn{
+        display: block;
+    }
+
+    .text{ 
+        position: absolute;
+    }
+
+    .text h1{
+        font-size: 25px;
+    }
+    .text p{
+        font-size:10px;
+    }
+
+    .nav-links{
+        position: fixed;
+        background: rgb(255, 255, 255 );
+        height: 100vh;
+        width:100px;
+        top: 0px;
+        right: -150px;
+        text-align: left;
+        flex-direction: column;
+        padding: 70px 20px 0;
+        z-index: 2;
+        transition: right 0.15s ease;
+    }
+
+    header.show-mobile-menu .nav-links {
+        right: 0px;
+    }
+}
+
+/*Styling for footer*/
+.footer{
+    background-position: center;
+    margin-top: 90px;
+    text-align: center;
+    min-height: 20vh;
+    max-width: 100%;
+    background-color: rgba(0, 0, 0,0.7);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+.footer h3{
+    color: white;
+    padding-top: 60px;
+}
+.footer a{
+    color: white;
+    cursor: pointer;
+}
+
+/*Styling for work button*/
+.work-btn{
+    display:inline-block;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border-radius: 15px;
+    font-size: 15px;
+    padding: 10px 60px;
+    background: rgb(56, 236, 101);
+    position: relative;
+    cursor: pointer;
+    top:10px;
+}
+.work-btn:hover{
+    background: transparent;
+    background-attachment: fixed;
+    color: black;
+    border-style: solid;
+    
+}
+
+/*Styling for details section*/
+.detail{
+    h3{
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .text p{
+        margin: 0 0 10px;
+        font-size: 15px;
+    }
+    
+}
+

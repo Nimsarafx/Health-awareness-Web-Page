@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="syles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+
+    <title>Physical Health</title>
+   
+</head>
+<body>
+    <section >
+    <div class="content-page">
+        <header>
+            <nav>
+                <img src="imges/logo.png" alt="imges">
+                <div class="nav-links">
+                    <span id="close-menu-btn" class="material-icons">close</span>
+                    <ul>
+                        <li><a href="home.html">HOME</a></li>
+                        <li><a href="Cart.html">STORE</a></li>
+                        <li><a href="profile.html">PROFILE</a></li>
+                        <li><a href="team.html">TEAM</a></li>
+                    </ul>
+                </div>
+                <span id="menu-btn" class="material-icons">menu</span>
+            </nav>
+        <div class="text">
+            <h1>PHYSICAL HEALTH</h1>
+        </div>
+    
+        </header>
+    </div>
+    </section>
+    <section>
+
+        <div class="importance">
+            <h1>IMPROTANCE OF PHYSICAL ACTIVITIES</h1><br>
+            <p>Engaging in regular physical activity stands as a cornerstone of optimal health. Its benefits are manifold: enhancing cognitive function, aiding weight management, mitigating disease risks, fortifying skeletal and muscular systems, and bolstering daily functionality.
+                
+                For adults, even modest reductions in sedentary behavior and incorporation of moderate-to-vigorous physical activity yield notable health dividends. Few lifestyle choices rival the profound impact of physical activity on overall well-being.
+                
+                Physical activity extends its advantages universally. Regardless of age, abilities, ethnicity, or body shape, everyone can reap its rewards, marking it as an inclusive pathway to health and vitality.</p><br>
+            <h2>Immediate Benefits</h2>
+            <p>Did you know a quick burst of exercise can be a brain booster for kids? Studies show moderate-to-vigorous physical activity can improve thinking and cognitive skills in children between 6 and 13 years old. And for adults, it can be a stressbuster, reducing short-term anxiety. The long-term benefits are even more impressive! Regular exercise can help keep your mind sharp, your memory on point, and your judgment sound throughout your life. It can also act as a shield against depression and anxiety, and even lull you into a more restful sleep.</p><br>
+             
+            <h2>Weight Management</h2>
+            <p>Balance is key! Weight gain happens when you consume more calories than you burn. To maintain your weight, aim for 150 minutes of moderate exercise weekly, like dancing or yard work. Spread it out over five days or find a schedule that works for you.
+
+                Remember, everyone's different. You might need more activity to reach a healthy weight. To lose weight and keep it off, significant physical activity is crucial. However, the key lies in a two-pronged approach: exercise and healthy eating.  Reducing your calorie intake through diet is essential for long-term success.</p><br>
+            
+            <h2>Reduce Your Health Risk</h2>
+            <p>Staying active protects your heart and blood vessels. Regular exercise (at least 150 minutes a week) reduces your risk of heart disease and stroke, major causes of death. Even higher activity levels offer even greater protection. Additionally, physical activity helps manage blood pressure and cholesterol, crucial factors in cardiovascular health.
+
+                Exercise also combats type 2 diabetes and metabolic syndrome. This syndrome combines risk factors like high blood sugar, high blood pressure, and unhealthy cholesterol levels. Even moderate activity levels can help prevent these conditions. The more active you are, the lower your risk becomes.</p><br>
+            
+            <h2>Strengthen Your Bones and Muscles</h2>
+            <p>Strong bones, joints, and muscles are key for movement and daily activities, especially as we age. Exercise helps keep them healthy, allowing you to stay active. Muscle-strengthening activities, like weight lifting, can build or maintain muscle mass and strength, which naturally declines with age. Gradual increases in weight and repetitions provide even greater benefits for everyone.</p><br>
+            
+            <h2>Increase Your Chances of Living Longer</h2>
+            <p>About 110,000 deaths annually in the US among adults aged 40 and above could be prevented by increasing moderate-to-vigorous physical activity marginally. Just adding 10 minutes daily shows benefits. Additionally, higher daily step counts correlate with reduced risks of premature death across different age groups.</p><br>
+        </div>
+
+        <div class="start">
+            <h1>HOW TO START PHYSICAL ACTIVITES</h1>
+            <p>Starting a fitness plan is a great step towards better health. Regular exercise reduces disease risk, improves balance and mood, and can even help with weight management and sleep. Here's a simplified guide to get you started in 5 steps.<br><br>
+                <strong> Your Starting Point:</strong><br>  Evaluate your current fitness level. Track your walking pace, push-up count, and flexibility. These numbers become benchmarks to measure progress.<br><br>
+                <strong> Design Your Program:</strong><br> Set clear goals weight loss, a marathon?  Aim for at least 150 minutes of moderate-intensity exercise per week, spread across most days.<br><br>
+                <strong>Gear Up:</strong><br> Start with good athletic shoes pick a type suited to your preferred activity. Activity trackers like apps or smart devices can help monitor your workouts.<br><br>
+                <strong>Begin Your Journey:</strong><br> Start slow and gradually extend workout duration. Aim for 30-60 minutes of exercise most days. Break it down into shorter sessions if needed.<br><br>
+                <strong>Stay Motivated:</strong><br>  Incorporate fun activities like family hikes or dancing. Listen to your body, take breaks when needed, and be flexible with your schedule. Remember, any activity is better than none!<br><br>
+            </p><br>
+        </div>
+
+        <div class="qoute">
+            <h1>STAY ACTIVE.  BE HEALTHY</h1>
+        </div>
+    </section>
+
+   
+
+    <div class="footer">
+        <footer>
+            <a class="work-btn" href="editor.html">page editor</a>
+        </footer>
+    </div>
+    
+    <script>
+
+        const header = document.querySelector("header");
+        const menuBtn = document.querySelector("#menu-btn");
+        const closeMenuBtn = document.querySelector("#close-menu-btn");
+        if(menuBtn){
+            menuBtn.addEventListener("click", () => {
+                header.classList.toggle("show-mobile-menu");
+            });
+        }
+        if(closeMenuBtn){
+            closeMenuBtn.addEventListener("click", () => {
+                header.classList.remove("show-mobile-menu");
+            });
+    
+        }
+        </script>
+    
+               
+</body>

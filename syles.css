@@ -1,0 +1,579 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+/*styles for the home page*/
+.home{
+    min-height: 100vh;
+    width: 100%;
+    background-image:linear-gradient(rgba(38, 51, 103, 0.5),rgba(38, 51, 103, 0.5)), url(imges/background.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.content-page{
+    min-height: 100vh;
+    width: 100%;
+    background-image:linear-gradient(rgba(38, 51, 103, 0.5),rgba(38, 51, 103, 0.5)), url(imges/physical\ health.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+/*styles for the navigation bar*/
+nav{
+    background: rgb(255,255,255,0.7);
+    height: 2px;
+    display: flex;
+    padding: 25px 35px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 100px;
+    height: 120px;
+    align-items: center;
+    
+}
+
+.nav-links ul li{
+    
+    list-style: none;
+    display: inline-block;
+    padding: 30px 20px;
+    position: relative;
+    font-weight: bold;
+}
+
+.nav-links ul li a{
+    color: #000000;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-links ul li ::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: rgb(255, 255, 255);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover ::after{
+    width:100% ;
+    background-color: rgb(0, 0, 0);
+}
+.nav-links ul li a:hover{
+    color:rgb(0, 0, 0);
+    transition: 0.5s;
+}
+a.active{
+    background: rgba(0, 46, 161, 0.3);
+}
+
+.text{
+    width: 90%;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    background-color: rgba(77, 167, 200, 0.4);
+}
+.text
+{
+    border-style:solid;
+    border-radius: 10px;
+}
+.text:hover{
+    background-color: rgba(34, 83, 101, 0.8);
+    border-style:double ;
+    border-width: 10px;
+    transition: 1s;
+}
+.text h1{
+    margin: 10px  10px;
+    font-size: 52px;
+    color: rgb(255, 255, 255);
+}
+.text p{
+    margin: 0 0 10px;
+    font-size: 15px;
+}
+
+#menu-btn{
+    display: none;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+#close-menu-btn{
+    display: none;
+    position: absolute;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    top: 20px;
+    right: 0px;
+    left: 0px;
+}
+/*styles for the small screen optimizations*/
+@media screen and (max-width:800px){
+    #close-menu-btn, #menu-btn{
+        display: block;
+    }
+
+    .text{
+        
+        position: absolute;
+    }
+
+    .text h1{
+        font-size: 25px;
+    }
+    .text p{
+        font-size:10px;
+    }
+
+    .nav-links{
+        position: fixed;
+        background: rgba(255, 255, 255,1 );
+        height: 100vh;
+        width:100px;
+        top: 0px;
+        right: -150px;
+        text-align: left;
+        flex-direction: column;
+        padding: 70px 20px 0;
+        z-index: 2;
+        transition: right 0.15s ease;
+    }
+
+    header.show-mobile-menu .nav-links {
+        right: 0px;
+    }
+   
+}
+/*styles for the mission in home page*/
+.mission{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 10px;
+}
+/*styles for the wellness pathways in home page*/
+.course{
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 10px;
+    
+}
+.mission h1{
+    background-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 56px;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+}
+.mission h2{
+    color: black;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 600;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.mission p{
+    font-size: 20px;
+    text-align: center;
+    font-weight: 400;
+    padding-right: 70px;
+    padding-left: 70px;
+}
+.course h1{
+    font-size: 40px;
+    padding-top: 50px;
+}
+
+.course h3{
+    font-size: 30px;
+    color: black;
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+
+fieldset{
+    background-color:rgb(211, 237, 241);
+    border-width: 2px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: black;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    transition: 1s;
+}
+
+fieldset:hover{
+    border-style: double;
+    border-width: 10px;
+    background-color:rgb(136, 172, 172)
+}
+
+.content{
+    padding-top: 5px;
+    margin: 2%;
+    display: flex;
+    justify-content: space-between;
+
+}
+/*styles for the ellness options home page*/
+.options{
+    flex-basis: 15%;
+    border-style: solid;
+    border-width: 2px;
+    background-color: rgb(243, 252, 255);
+    border-radius: 10px;
+    margin-bottom: 10%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+.options:hover{
+    box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.5);
+    background-color: rgb(223, 252, 252);
+    border-style: none;
+}
+
+.read-btn{
+    display:inline-block;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border-radius: 15px;
+    font-size: 15px;
+    padding: 5px 30px;
+    background: black;
+    position: relative;
+    cursor: pointer;
+}
+
+.read-btn:hover{
+    background: transparent;
+    color: black;
+    border-style: solid;
+}
+
+#pic{
+    padding-bottom: 10px;
+}
+
+
+/*styles for small screen for wellness options*/
+@media screen and (max-width:1100px){
+    .course{
+        width: 50%;
+    }
+    .content{
+        flex-direction: column;
+    }
+    .options{
+        flex-wrap: wrap;
+        padding: 10px 0px 0;
+    
+    }
+    #pic{
+        padding-bottom: 30px;
+    }
+}
+
+@media(max-width:800px){
+    #pic{
+        width:200px ;
+        height: 250px;
+    }
+    .mission h2{
+        line-height: 30px;
+    }
+}
+
+/*styles for the link for the part with the feed back form*/
+.formlink{
+    max-height: 50px;
+    margin:20px auto ;
+    width: 80%;
+    background-image:linear-gradient(rgba(38, 51, 103, 0.8),rgba(38, 51, 103, 0.8)), url(imges/motivationalquotestoinspiresuccessfulhabits.jpg); ;
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+    text-align: center;
+    padding: 120px 0;
+}
+.formlink h1{
+    font-size: 35px;
+    color: white;
+    text-shadow:2px 2px black;
+}
+.formlink p{
+    font-size: 20px;
+    color: white;
+    padding:20px;
+}
+.formlink-btn{
+    display:inline-block;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border-radius: 15px;
+    font-size: 15px;
+    padding: 5px 30px;
+    background: black;
+    position: relative;
+    cursor: pointer;
+}
+
+.formlink-btn:hover{
+    background: transparent;
+    background-attachment: fixed;
+    color: black;
+    border-style: solid;
+}
+/*styles for small screen optimization*/
+@media (max-width:800px) {
+    .formlink h1{
+        font-size: 25px;
+    }
+    .formlink p{
+        font-size: 10px;
+    }
+    .footer h1{
+        font-size: 25px;
+    }
+    .footer p{
+        font-size: 10px;
+    }
+}
+/*styles for the pagefooter*/
+.footer{
+    background-position: center;
+    margin-top: 90px;
+    text-align: center;
+    min-height: 15vh;
+    max-width: 100%;
+    background-color: rgba(41, 41, 41, 0.5);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+.footer p{
+    color: white;
+    padding-top: 60px;
+}
+.footer a{
+    color: white;
+    cursor: pointer;
+}
+.work-btn{
+    display:inline-block;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border-radius: 15px;
+    font-size: 15px;
+    padding: 5px 30px;
+    background: rgba(0, 0, 0,0.5);
+    position: relative;
+    cursor: pointer;
+    bottom: -50px;
+}
+.work-btn:hover{
+    background: transparent;
+    background-attachment: fixed;
+    color: black;
+    border-style: solid;
+}
+/*styles for the editoe page*/
+.container {
+    padding: 20px;
+}
+.editor-info {
+    background-color: #add8e6; 
+    border-radius: 10px;
+    text-align: center;
+    padding: 1px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+.name {
+    background-color: rgb(255, 255, 255);
+    padding:5px;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    font-size: medium;
+    font-style: italic;
+    font-weight: 100;
+    
+}
+.name::before,
+.name::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px; 
+    
+}
+
+.name::before {
+    top: 22%; 
+    left: 30px;
+    right:30px;
+}
+
+.name::after {
+    bottom: 60.5%;
+    left: 30px;
+    right:30px;
+}
+.tasks {
+    background-color: #add8e6;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+/*styles for the feedback form*/
+form{
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 15px;
+    background-color:rgba(77, 167, 200, 0.4);
+    background-position: center;
+    text-align: center;
+}
+.home-btn{
+    text-align: center;
+    position: relative;
+    bottom: 5px;
+    left: 40%;
+    background-color: rgba(255, 255, 255,0.5);
+    border-radius: 15px;
+    padding: 2px 10px;
+    text-decoration: none;
+    color: rgb(3, 3, 51);
+}
+.home-btn:hover{
+    background: transparent;
+    background-attachment: fixed;
+    color: black;
+    border-style: solid;
+}
+@media (max-width:800px){
+    form{
+        font-size: 10px;
+    }
+}
+
+form h1{
+    text-align: center;
+}
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+}
+
+/*styles for the content page*/
+.content{
+    margin: 0;
+    padding: 0;
+}
+.importance,.start{
+    border-style: solid;
+    max-width: 70%;
+    background-color:rgba(46, 98, 117, 0.4);
+    border-radius: 15px;
+    padding: 20px 30px;
+    margin: 5% auto;
+}
+.importance h1{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 60px;
+}
+.importance h2{
+
+    padding-top: 50px;
+    text-align: center;
+    font-size: 30px;
+}
+.importance p {
+    text-align: center;
+    font-size: 20px;
+}
+.start h1{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 60px;
+}
+.start p{
+    text-align: center;
+    font-size: 20px;
+}
+.qoute{
+    font-size: 50px;
+    text-align: center;
+    padding-top: 50px;
+    transition: 1.5s;
+}
+.qoute:hover{
+    font-size: 60px;
+    width: 80%;
+    margin: 0 auto;
+    text-shadow:  10px 5px rgba(84, 112, 184, 0.5);
+   
+}
+
+@media (max-width:800px){
+    .importance h1{
+
+        font-size: 40px;
+    }
+    .importance h2{
+    
+       
+        font-size: 20px;
+    }
+    .importance p {
+        
+        font-size: 10px;
+    }
+    .start h1{
+       
+        font-size: 40px;
+    }
+    .start p{
+        
+        font-size: 15px;
+    }
+    .qoute{
+        font-size: 30px;
+        transition: 1.5s;
+    }
+    .qoute:hover{
+        font-size: 40px;
+     
+    }
+}

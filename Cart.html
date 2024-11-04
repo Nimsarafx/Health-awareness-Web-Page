@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body class="main">
+    
+    <div class="container">
+        <header>
+            <nav>
+                <img src="imges/logo.png" alt="imges">
+                <div class="nav-links">
+                    <span id="close-menu-btn" class="material-icons">close</span>
+                    <ul>
+                        <li><a href="home.html">HOME</a></li>
+                        <li><a class="active" href="Cart.html">STORE </a></li>
+                        <li><a href="profile.html">PROFILE</a></li>
+                        <li><a href="team.html">TEAM</a></li>
+                    </ul>
+                </div>
+                <span id="menu-btn" class="material-icons">menu</span>
+            </nav><br>
+            <h1>Shop</h1>
+            <div class="shopping">
+                <img src="shoppingcart.png">
+                <span class="quantity">0</span>
+            </div>
+        </header>
+
+        <div class="list">
+          
+        </div>
+    </div>
+    <div class="card">
+        <h1>Cart</h1>
+        <ul class="listCard">
+        </ul> 
+        <hr>
+        <div class="total-container">
+            <span>Total:</span>
+            <span class="total">0</span>
+        </div>
+        <div class="checkout-buttons">
+            <button class="checkout"><a href="checkout.html">Checkout</a></button>
+            <button class="closeShopping">Close</button>
+        </div>
+        
+    </div>
+
+    
+    <script src="cart.js"></script>
+    <script>
+
+        const header = document.querySelector("header");
+        const menuBtn = document.querySelector("#menu-btn");
+        const closeMenuBtn = document.querySelector("#close-menu-btn");
+        if(menuBtn){
+            menuBtn.addEventListener("click", () => {
+                header.classList.toggle("show-mobile-menu");
+            });
+        }
+        if(closeMenuBtn){
+            closeMenuBtn.addEventListener("click", () => {
+                header.classList.remove("show-mobile-menu");
+            });
+    
+        }
+    </script>
+
+<div class="footer">
+        <footer>
+            <h3> Developed by : Ashvitha Raveendran</h3>
+            <a class="work-btn" href="editor3.html">page editor</a>
+        </footer>
+</div>
+
+
+    
+</body>
+</html>

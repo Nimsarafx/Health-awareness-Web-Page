@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health </title>
+    <link rel="stylesheet" href="syles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<section>
+    <div class="home">
+    <header >
+        <nav>
+            <img src="imges/logo.png" alt="imges">
+            <div class="nav-links">
+                <span id="close-menu-btn" class="material-icons">close</span>
+                <ul>
+                    <li><a class="active" href="home.html">HOME</a></li>
+                    <li><a href="Cart.html">STORE </a></li>
+                    <li><a href="profile.html">PROFILE</a></li>
+                    <li><a href="team.html">TEAM</a></li>
+                </ul>
+            </div>
+            <span id="menu-btn" class="material-icons">menu</span>
+        </nav>
+    <div class="text">
+        <h1>YOUR GOOD HEALTH AND WELLBEING <br>IS IMPORTANT</h1>
+        <p>Unlock the key to a vibrant life<br>prioritize good health and wellbeing for a fulfilling and joyful existence.</p>
+    </div>
+
+    </header>
+</div>
+</section>
+
+<section class="mission">
+    <fieldset>
+        <legend><h1>Our Mission</h1></legend>
+        <h2>"Inspiring Healthy Habits: Advocating for Sustainable Lifestyles"</h2>
+        <p>Inspiring Healthy Habits: Advocating for Sustainable Lifestyles" champions the transformative power of sustainable living. Through education and encouragement, it motivates individuals to adopt holistic practices that nourish both body and planet. By fostering a community committed to wellness and environmental stewardship, it paves the way for a healthier, more sustainable future for all.</p>
+    </fieldset>
+    
+</section>
+
+<section class="course">
+    <h1>Wellness Pathways</h1>
+    <div class="content">
+
+        <div class="options">
+            <h3>PHYSICAL </h3>
+            <img src="imges/physical.jpg" alt="44" id="pic1" height="300" width="300">
+            <br><a href="content.html" class="read-btn">Read More</a><br>
+        </div>
+
+        <div class="options">
+            <h3>MENTAL</h3>
+            <img src="imges/mental.jpg" alt="44" id="pic2" height="300" width="300">
+            <br><a href="content2.html" class="read-btn">Read More</a><br>
+        </div>
+
+        <div class="options">
+            <h3>SOCIAL</h3>
+            <img src="imges/Social-Health.jpg" alt="44" id="pic3" height="300" width="300">
+            <br><a href="content3.html" class="read-btn">Read More</a><br>
+        </div>
+    </div>
+</section>
+
+
+<section class="formlink">
+    <h1>Let Us Know Your Experience On Our Services</h1>
+    <p>Simply Fill The Form Bellow </p>
+    <a class="formlink-btn" href="feedback.html">Click Here</a>
+</section>
+
+<div class="footer">
+    <footer>
+        <a class="work-btn" href="editor.html">page editor</a>
+    </footer>
+</div>
+
+
+<script>
+
+    const header = document.querySelector("header");
+    const menuBtn = document.querySelector("#menu-btn");
+    const closeMenuBtn = document.querySelector("#close-menu-btn");
+    if(menuBtn){
+        menuBtn.addEventListener("click", () => {
+            header.classList.toggle("show-mobile-menu");
+        });
+    }
+    if(closeMenuBtn){
+        closeMenuBtn.addEventListener("click", () => {
+            header.classList.remove("show-mobile-menu");
+        });
+
+    }
+</script>
+
+</body>
+</html>
